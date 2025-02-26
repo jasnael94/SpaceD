@@ -5,7 +5,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class ProgramController extends AbstractController
+class ProgramsController extends AbstractController
 {
     #[Route(path:'/programs', name: 'programs_index')]
     public function index(): Response
