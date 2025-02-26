@@ -7,11 +7,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ProgramController extends AbstractController
 {
-    #[Route(path:'/program', name: 'program_index')]
+    #[Route(path:'/programs', name: 'programs_index')]
     public function index(): Response
     {
-        return new Response(
-            '<!doctype html><html lang="en"><title>Donkey Series</title><body>Donkey Series Index</body></html>'
-        );
+        return $this->render('programs/index.html.twig', [
+            'website' => 'Donkey Séries',
+         ]);
     }
 }
