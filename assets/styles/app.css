@@ -1,5 +1,6 @@
 body {
     background-color: rgb(157, 157, 178);
+    font-family: Arial, sans-serif;
 }
 
 /* Style global */
@@ -9,9 +10,7 @@ body {
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
+
 
 /* Header */
 header {
