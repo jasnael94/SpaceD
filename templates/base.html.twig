@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Bienvenue sur notre site !{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        
+        <!-- Lien vers les fichiers CSS générés par Webpack Encore -->
         <link rel="stylesheet" href="/build/app.css">
-        <script src="/build/app.js"></script>
+        
+        <!-- Chargement du fichier JS généré par Webpack Encore -->
+        <script src="/public/build/app.js"></script>
+        
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -15,6 +20,23 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
+
+    <!-- Section header (Navbar) -->
+    <header>
+        <div class="navbar-container">
+            <ul class="navbar-menu">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/about">À propos</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="navbar-toggle">
+                <span>&#9776;</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu de la page spécifique à chaque template -->
     <body>
         {% block body %}{% endblock %}
     </body>

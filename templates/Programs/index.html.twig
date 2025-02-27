@@ -1,14 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <title>Donkey Series</title>
-   <link rel="stylesheet" href="/build/app.css">
-   <script src="/build/app.js"></script>
-</head>
-<header></header>
-<body>
-    {% include 'Programs/navbar.html.twig' %}
-   <h1>{{ website }} index</h1>
-</body>
-</html>
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'Accueil{% endblock %}
+
+{% block body %}
+    <h1>{{ website }} index</h1>
+    <p>Bienvenue sur notre site !</p>
+{% endblock %}
